@@ -1,10 +1,32 @@
 let nome = ("Homem de ferro")
-let xp = 1000
+let xp = 7500
 let nivel
 
+if (xp <= 1000) {
+    nivel = "Ferro"
+} else if (xp >= 1001 && xp <= 2000) {
+    nivel = "Bronze"
+} else if (xp >= 2001 && xp <= 5000) {
+    nivel = "Prata"
+} else if (xp >= 5001 && xp <= 7000) {
+    nivel = "Ouro"
+} else if ( xp >= 7001 && xp <= 8000) {
+    nivel = "Platina"
+} else if (xp >= 8001 && xp <= 9000) {
+    nivel = "Ascendente"
+} else if (xp >= 9001 && xp <= 10000) {
+    nivel = "Imortal"
+} else if (xp >= 10001) {
+    nivel = "Radiante"
+}
+
+console.log("O Herói de nome: " + nome + " está no nível de: " + nivel)
+
+//outra opção
 switch (true){
     case (xp <= 1000) :
         nivel = "Ferro"
+        break
     case (xp >= 1001 && xp <= 2000) :
         nivel = "Bronze"
         break
@@ -25,8 +47,11 @@ switch (true){
         break
     case (xp >= 10001) :
         nivel = "Radiante"
+        break
     default :
         nivel = "nivel desconhecido"
+        break
 
 }
 console.log ("O Herói de nome: " + nome + " está no nível de: " + nivel)
+
